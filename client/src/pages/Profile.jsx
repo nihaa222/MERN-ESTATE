@@ -18,6 +18,7 @@ import {
   signOutUserFailure,
   signOutUserSuccess,
 } from "../redux/user/userSlice";
+import { Link } from "react-router-dom";
 
 //firebase storage
 // allow read;
@@ -177,6 +178,12 @@ const Profile = () => {
         <button className="bg-slate-700 text-white rounded-lg uppercase hover:opaity-95 disabled:opacity-80 p-3">
           update
         </button>
+        <Link
+          className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95"
+          to={"/create-Listing"}
+        >
+          create listing
+        </Link>
         <div className="flex justify-between mt-5">
           <span
             onClick={handleDeleteUser}
